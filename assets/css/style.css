@@ -32,5 +32,23 @@ nav ul {
   footer a:hover {
     color: white;
   }
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    object-fit: cover;
+  }
+    
+  .project img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 8px;
+  }
+  
   
   
