@@ -1,29 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/projects.html">Projects</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="brand">
+        <a href="index.html">Aykhan Mammadov</a>
+        <span class="tagline">musician &amp; computer science student</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html"{% if page.nav == "home" %} class="active"{% endif %}>Home</a>
+        <a href="about.html"{% if page.nav == "about" %} class="active"{% endif %}>About</a>
+        <a href="projects.html"{% if page.nav == "projects" %} class="active"{% endif %}>Projects</a>
+        <a href="https://github.com/fort-45/site1101" target="_blank" rel="noopener">Repo</a>
+      </nav>
+    </div>
+  </header>
 
-  <main>
+  <main class="{{ page.main_class }}">
     {{ content }}
   </main>
 
-  <footer>
-    <p>Connect with me:</p>
-    <a href="https://github.com/fort-45" target="_blank">GitHub</a> |
-    <a href="https://www.codecademy.com/profiles/bit5275319867" target="_blank">Codecademy</a> |
-    <a href="https://github.com/fort-45/site1101" target="_blank">Website Repo</a>
-    <p>&copy; 2025 Aykhan Mammadov</p>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>Aykhan Mammadov</strong>
+        <p>Musician &amp; computer science student</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/fort-45" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.codecademy.com/profiles/bit5275319867" target="_blank" rel="noopener">Codecademy</a>
+        <a href="https://github.com/fort-45/site1101" target="_blank" rel="noopener">Repository</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
